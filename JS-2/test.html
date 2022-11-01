@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figures</title>
+</head>
+
+<body style="font-family:  'Courier New', monospace;">
+
+    <div id="rectangle"></div>
+    <div id="triangle" style="margin-top:5px;"></div>
+    <div id="etria" style="margin-top:5px;"></div>
+
+
+    <script>
+
+
+        let rect = "";
+
+        // draw top line
+        for (let i = 0; i < 6; i++) {
+            rect = rect + "$";
+        }
+        rect = rect + '</br>';
+
+        // drow middle line
+        rect = rect + "$";
+        for (let i = 0; i < 4; i++) {
+            rect = rect + '&nbsp';
+        }
+        rect = rect + "$";
+        rect = rect + '</br>';
+
+        // draw bottom line
+        for (let i = 0; i < 6; i++) {
+            rect = rect + "$";
+        }
+
+        document.getElementById("rectangle").innerHTML = rect;
+
+        let tria = '$</br>';
+
+        // drow middle line
+        for (let i = 0; i < 4; i++) {
+            tria = tria + '$'; // add left $
+
+            for (let k = 0; k < i; k++) {
+                tria = tria + '&nbsp';
+            }
+            // here we should add some amount of spaces
+            tria = tria + '$</br>';
+        }
+        // draw bottom line
+        for (let i = 0; i < 6; i++) {
+            tria = tria + "$";
+        }
+
+        document.getElementById("triangle").innerHTML = tria;
+
+
+       let etria = '&nbsp&nbsp&nbsp$&nbsp&nbsp&nbsp</br>';
+       let spaces = 1;
+
+        for (let i = 0; i < 3; i++) {
+            let shift = 7-2-spaces*2;
+        for (let i = 0; i < shift; i++) {
+            etria = etria + '&nbsp';
+        }    
+        etria = etria + '$';
+        for (let a = 0; a < spaces; a++) {
+        etria = etria + '&nbsp';
+    }
+        etria = etria + '$';
+        for (let i = 0; i < shift; i++) {
+            etria = etria + '&nbsp';
+        }    
+        etria = etria + '</br>';
+        spaces = spaces + 2;
+       }
+       
+
+
+        document.getElementById("etria").innerHTML = etria;
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
