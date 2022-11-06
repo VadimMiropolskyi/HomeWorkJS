@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        /* Задание 1: Напиши функцию map(fn, array),
+         которая принимает на вход функцию и массив, и обрабатывает каждый элемент массива этой функцией, возвращая новый массив. */
+        const arr = [1, 2, 3, 4, 5];
+
+        function func(arr1) {
+            const arr2 = [];
+            for (let i = 0; i < arr1.length; i++) {
+                arr2[i] = arr1[i] + 2;
+            }
+            return arr2;
+        }
+
+        function map(arr0, func0) {
+            document.write(func0(arr0));
+        }
+
+        map(arr, func);
+
+        /* Задание 2: Перепишите функцию, используя оператор “?” или “||”. Следующая функция возвращает true,
+           если параметр age больше 18. В ином случае она задаёт вопрос confirm и возвращает его результат.
+
+             function checkAge(age) {
+             if (age > 18) {
+             return true;
+             } else {
+            return confirm("Родители разрешили?");
+             }} 
+*/
+
+let age = prompt('Сколько вам лет?', 18);
+
+function checkedAge(age) {
+    return age > 18 ? true : confirm("Родители разрешили?");
+}
+
+if (checkAge(age)) {
+  alert ('Доступ получен');
+} else  {
+  alert ('Доступ закрыт');
+}
+
+
+
+
+    </script>
+</body>
+
+</html>
