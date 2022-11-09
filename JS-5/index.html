@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       const doc = {
+    head: '',
+    body: '',
+    footer: '',
+    data: '',
+    app: {
+        head: '',
+        body: '',
+        footer: '',
+        data: '',
+    },
+    
+    filling: function () {
+        this.head = prompt('Введите заголовок:');
+        this.body = prompt('Введите основной текст:');
+        this.footer = prompt('Введите заключительный текст:');
+        this.data = prompt('Введите дату:');
+
+        this.app.head = prompt('Введите заголовок приложения:');
+        this.app.body = prompt('Введите основной текст приложения:');
+        this.app.footer = prompt('Введите заключительный текст приложения:');
+        this.app.data = prompt('Введите дату приложения:');
+    },
+
+    show: function () {
+        document.write('Заголовок: ' + this.head + '. <br>');
+        document.write('Основной текст: ' + this.body + '. <br>');
+        document.write('Заключительный текст: ' + this.footer + '. <br>');
+        document.write('Дата: ' + this.data + '. <hr>');
+
+        document.write('Заголовок приложения: ' + this.app.head + '. <br>');
+        document.write('Основной текст приложения: ' + this.app.body + '. <br>');
+        document.write('Заключительный текст приложения: ' + this.app.footer + '. <br>');
+        document.write('Дата приложения: ' + this.app.data + '. <br>');
+    },
+};
+
+doc.filling();
+doc.show();
+
+    </script>
+</body>
+</html>
