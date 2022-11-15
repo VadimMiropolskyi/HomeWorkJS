@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Функция-конструктор, которая создает обьект.
+        function Human(name, lastName) {
+
+            // Свойства уровня экземплера.
+            this.firstName = name; 
+            this.lastName = lastName; 
+
+            //Метод уровня экземпляра.
+            this.showInfo = function(){
+                document.write("Имя: " + this.firstName + "; Фамилия: " + this.lastName + "<br/>");
+            }; 
+        };
+
+        // Свойство уровня функции-конструктора.
+        Human.MaxAge = 100;
+
+        // Метод уровня функции-конструктора.
+        Human.getInitials = function () {
+            return new Human("Sam", "Smith");
+        }
+
+        //Создание экземпляров.
+        var human1 = new Human("Tom", "Williams");
+        var human2 = new Human("Daniel", "Jones");
+        var human3 = new Human("Kate", "Miller");
+
+        //Вызов метода displayInfo() на созданых обьектах.
+        human1.showInfo();
+            document.write("<hr>");
+        human2.showInfo();
+            document.write("<hr>");
+        human3.showInfo();
+            document.write("<hr>");
+        Human.getInitials().showInfo();
+    </script>
+
+</body>
+</html>

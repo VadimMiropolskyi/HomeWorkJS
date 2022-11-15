@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // Функция-конструктор, которая создает обьект.
+        function Human(Name, Age) {
+            this.name = Name;
+            this.age = Age;
+        };
+        
+        //const humanObject
+        const obj1 = new Human (prompt("Введите имя: ", "Kate"), prompt("Введите возраст: ", "20")),
+              obj2 = new Human (prompt("Введите имя: ", "Bob"), prompt("Введите возраст: ", "44")),
+              obj3 = new Human (prompt("Введите имя: ", "Lisy"), prompt("Введите возраст: ", "32")), 
+              obj4 = new Human (prompt("Введите имя: ", "Jason"), prompt("Введите возраст: ", "24")),
+              obj5 = new Human (prompt("Введите имя: ", "Jane"), prompt("Введите возраст: ", "30")),
+              obj6 = new Human (prompt("Введите имя: ", "Daniel"), prompt("Введите возраст: ", "56"));
+        
+        //Список обьектов.
+        const humanObject = [obj1, obj2, obj3, obj4, obj5, obj6];
+
+        //Функция сортировки по возростанию.
+        humanObject.sort((a, b) => a.age - b.age);
+
+        document.write("<hr>");
+
+        document.write("Сортировка Age по возростанию:");
+
+        document.write("<br>");
+
+        //Вывод массива обьектов с отсортированным значением Age по возсростанию.
+        let = i = 1;
+        for(item of humanObject){
+            
+            document.write(`Имя: ${item.name}, Возраст: ${item.age} <br/>`);
+            i++;
+        };
+
+        document.write("<hr>");
+
+        //Функция сортировки по убыванию.
+        humanObject.reverse();
+
+        humanObject.sort((a, b) => b.age - a.age);
+
+        document.write("Сортировка Age по убыванию:");
+
+        document.write("<br>");
+
+        //Вывод массива обьектов с отсортированным значением Age по убыванию.
+        let = i = 1;
+        for(item of humanObject){
+            
+            document.write(`Имя: ${item.name}, Возраст: ${item.age} <br/>`);
+            i++;
+        };
+
+        document.write("<hr>");
+
+    </script>
+
+</body>
+</html>
