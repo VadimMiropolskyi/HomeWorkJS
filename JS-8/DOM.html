@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>  
+</head>
+<body>
+<input type="button" value="Клацай" onclick="newDiv()" />
+<div id="divBlock" class="more"></div>
+
+<script>
+    /*Создайте страницу с кнопкой, при нажатии по кнопке на странице создается div с 
+    произвольным текстом. После создания 10 дивов все они должны удалиться.
+    */
+    const newDiv = () => {
+        const divBlock = document.querySelector("#divBlock");  
+        const item = document.createElement("div");
+        item.innerHTML= "Давай Ще";
+        if (divBlock.children.length<10 ) {
+                divBlock.appendChild(item);
+        } else { 
+            while (divBlock.lastElementChild) {
+                divBlock.removeChild(divBlock.lastElementChild);
+            };       
+        };
+    };
+</script>
+
+    
+</body>
+</html>
