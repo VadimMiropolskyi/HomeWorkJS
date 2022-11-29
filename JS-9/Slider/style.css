@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    .container{
+      height: 600px;
+      width: 533px;
+      position: relative;
+    }
+    .container img{
+      height: 300px;
+      position:absolute;
+      opacity: 0;
+      transition: .5s all;
+    }
+    .container img:nth-child(1){
+      opacity: 1;
+    }
+    button{
+        margin: 10px;
+    }
