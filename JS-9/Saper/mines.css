@@ -1,0 +1,50 @@
+.block {
+    width: 240px;
+    margin:auto;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+.field {
+    display: grid;
+    grid-template-columns: repeat(8, 30px);
+}
+button {
+    height: 30px;
+    font-size: 17px;
+    color: indigo;
+}
+.flag {
+    background-image: url('./img/flag.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bomb {
+    background-image: url('./img/mina.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.up_menu {
+    display: flex;
+    justify-content: space-between;
+}
+.newGame {
+    height: 30px;
+    text-align: center;
+    color: blueviolet;
+    padding-top: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.newGame:hover {
+    color: rgb(30, 26, 31);
+    font-size: 17px;
+}
+.flag_count {
+    height: 30px;
+    text-align: center;
+    color: blueviolet;
+    padding-top: 7px;
+    font-size: 16px;
+}
